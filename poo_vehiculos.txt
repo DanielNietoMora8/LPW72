@@ -1,0 +1,84 @@
+//clases en c++
+
+#include <iostream>
+#include <stdlib.h>
+#include <vector>
+using namespace std;
+
+class vehiculo
+{private://atributos
+     string lp;
+     int _n1;
+     int _n2;
+     int _n3;
+     string propietario;
+     char t_combustible;
+     char v;
+public://metodos
+    vehiculo(int,int,int,string,string,string);// construtor
+    void matricula();
+    bool picoyplaca(int d,int h,char _tc,char _tv);
+    void placa();
+};//notese que lleva punto y coma despues de la llave
+//construtor ,nos sirve para inicializar los atributos
+
+vehiculo::vehiculo(int _n1,int _n2, int _n3,string _lp, string _propietario, string _tc)
+
+{    string lp=_lp;
+     int n1=_n1;
+     int n2=_n2;
+     int n3=_n3;
+
+    string prorietario=_propietario;
+    string t_combustible=_tc;
+
+}
+void vehiculo::matricula()
+{
+   string _propietario;
+   string _nd;
+   int r;
+
+    cout<<"el vehicullo es de unico dueño?... digite 1 para si o 2 para no"<<endl;
+    cin>>r;
+    if (r==1)
+            cout<<"el propietario es unico"<<_propietario<<endl;
+    else
+        cout<<"ingrese nombre del nuevo propietarios del vehiculo!"<<endl;
+        cin>>_nd;
+}
+
+bool vehiculo::picoyplaca(int d,int h,char _tc,char _tv)
+{char e,c;
+
+    if(_tc==e){ cout<<"el vehiculo no tiene restricion"<<endl;}
+    else
+   {
+
+    bool cr=false;
+  if ((d==1 && h>=6 && h>=20 && _n3!=6 && _n3!=9 )||(d==2 && h>=6 && h>=20 && _n3!=5 && _n3!=7)||(d==3 && h>=6 && h>=20 && _n3!=1 && _n3!=4)||(d==4 && h>=6 && h>=20 && _n3!=8 && _n3!=0)||(d==5 && h>=6 && h>=20 && _n3!=3 && _n3!=2))
+  {
+      cr=true;
+  }
+   }
+}
+
+void vehiculo::placa()
+{
+    string _lp;
+    cout<<"la placa del vehiculo es "<<_lp<<_n1<<_n2<<_n3<<endl;
+}
+int main()
+{int d,h;
+char _tv;
+cout<<"ingrese el dia de la semana,lun=1, mar=2,...7=domin"<<endl;
+cin>>d;
+cout<<"ingrese la hora en formato 24h"<<endl;
+cin>>h;
+
+vehiculo v1 = vehiculo(5,7,0,"mtv","aldrnik","c");
+//v1.matricula();
+//v1.placa();
+//v1.picoyplaca();
+
+}
