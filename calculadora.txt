@@ -1,0 +1,24 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+from typing_extensions import Self
+class calculadora:
+  def __init__(self, numero1:float ,numero2:float):
+    self.__numero1 = numero1
+    self.__numero2 = numero2
+    self.__suma = 0
+    self.__resta = 0
+    self.__mult = 0
+    self.__div = 0
+
+  def suma(self, suma): 
+    self.suma = self.__numero1 + self.__numero2
+
+  def resta(self, resta):
+    self,resta = self.__numero1 - self.__numero2 
+
+  def mult(self, mult):
+    self.mult = self.__numero1 * self.__numero2
+
+  def div(self, div):
+    self.div = self.__numero1 / self.__numero2
