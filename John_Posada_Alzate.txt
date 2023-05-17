@@ -1,0 +1,64 @@
+
+#primer punto
+
+import random
+import numpy as np
+import matplotlib.pyplot as plt
+
+class Matriz:
+    def _init_(self, tamaño, llenado, cantidad):
+        self.tamaño = tamaño
+        self.llenado = llenado
+        self.cantidad = cantidad
+        self.matrices = []
+
+    def generar_matrices(self):
+        if self.llenado == "zeros":
+            for _ in range(self.cantidad):
+                matriz = np.zeros(self.tamaño)
+                self.matrices.append(matriz)
+        elif self.llenado == "ones":
+            for _ in range(self.cantidad):
+                matriz = np.ones(self.tamaño)
+                self.matrices.append(matriz)
+        elif self.llenado == "random":
+            for _ in range(self.cantidad):
+                matriz = np.random.randint(20, 40, self.tamaño)
+                self.matrices.append(matriz)
+
+    def multiplicar_matrices(self):
+        for matriz in self.matrices:
+            if matriz.shape[0] == matriz.shape[1]:
+                producto = np.dot(matriz, matriz.T)
+                print(producto)
+            else:
+                print("Las matrices no tienen el tamaño adecuado para la multiplicación.")
+
+    def mostrar_imagenes(self):
+        for matriz in self.matrices:
+            plt.imshow(matriz, cmap='gray')
+            plt.show()
+
+    def suma_total(self):
+        sumas = []
+        for matriz in self.matrices:
+            suma = np.sum(matriz)
+            sumas.append(suma)
+        return sumas
+
+m=Matriz ((3,3),"random",2)
+m.generar_matrices()
+result=m.multiplicar_matrices()
+print("resultado es:")
+print(result)
+
+#segundo punto
+class Identificacion:
+    def __init__(self, nombre, edad):
+        self.__nombre = nombre
+        self.__edad = edad
+
+    def saludos(self):
+        print(f"Hola, soy {self.__nombre} y tengo {self.__edad} años.")
+pers = Identificacion("jaiver", 35)
+pers.saludos()
