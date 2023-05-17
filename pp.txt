@@ -1,0 +1,43 @@
+from re import M
+from typing_extensions import Self
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+class vehi:
+    def __init__(Self,tipo_v,tipo_c,placa,matricula,modelo):
+       Self.tipo_v = tipo_v
+       Self.tipo_c = tipo_c
+       Self.placa = placa
+       Self.matricula = matricula
+       Self.modelo =modelo
+
+      ########funciones o metodos
+
+    def pla(self):
+      
+      print(f"la placa es: {self.placa}:")
+      
+    def mo(self):
+      print(f"el modelo es: {self.modelo}")
+    
+    def pyp(self):
+      _pl =[]
+      for i in range(5):
+       _pl = input(f"ingrese placa {i}")
+       _pl.append(placa)
+      #t = int(in)
+      d=int(imput(f"ingrese dia de la semana 1=lunes,2=martes,7=domingo"))
+      h =int(imput(f"ingrese hors en formato de 24"))
+
+"""for i in range(4):
+        nota = int(input(f"Ingrese nota {i}"))
+        notas.append(nota)"""
+
+
+
+###instanciando     
+v1 = vehi("carro","c","stx32","medellin",2012)
+v1.pla()
+v1.mo()
+v1.pyp()

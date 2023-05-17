@@ -1,0 +1,8 @@
+from skimage import color
+from skimage import io
+from skimage import util 
+img = io.imread("/content/drive/MyDrive/imagenes/mar.jpg")
+img2 = util.invert(color.rgb2gray(img))
+plt.imshow(img)
+plt.imshow(img2
+
