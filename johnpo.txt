@@ -1,0 +1,17 @@
+from os import MFD_HUGE_256MB
+from typing_extensions import Self
+import numpy as up
+import matplotlib.pyplot as plt
+import pandas as pd
+class veh:
+    def __init__(Self,marca_ma,modelo_mo,color_co,valor_va,cilindraje_ci):
+      Self.marca_ma = marca_ma
+      Self.modelo_mo = modelo_mo
+      Self.color_co = color_co
+      Self.valor_va = valor_va
+      Self.cilindraje_ci = cilindraje_ci 
+    def mar(self):
+      
+      print(f"la marca es:{self.marca_ma}")
+v = veh("mazada",2012,"rojo",27000000,1600)
+v.mar()
