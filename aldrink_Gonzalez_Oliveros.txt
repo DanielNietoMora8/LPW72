@@ -1,0 +1,58 @@
+sulucion parcial
+1)
+#examen punto 1 
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+##clase
+class par:
+    def __init__(self,tm,ma,num):
+        self.tm = tm
+        self.ma = ma
+        self.num = num
+        self.mat = []
+        ###metodos##
+        #genero matr
+    def gm(self):
+        for _ in range(self.num):
+            if self.fill_type == "zeros":
+                ma1 = np.zeros(self.size)#zeros
+            elif self.fill_type == "ones":
+                mat1 = np.ones(self.size)#unos usando numpy
+            elif self.fill_type == "random":
+                mat1 = np.random.uniform(20, 40, self.size)#aleatorios
+            else:
+                raise ValueError("Invalid fill type. Supported fill types: 'zeros', 'ones', 'random'")
+            
+            self.matr.append(mat1)
+    
+    def mult(self):
+        for mat in self.mat:
+            if mat.shape[0] == mat.shape[1]:
+                pro = np.dot(mat, mat.T)
+                print(pro)
+            else:
+                print("Las matrices no se pueden mult.")
+    def get_total_sum(self):
+        sums = [np.sum(mat) for mat in self.mat]
+        return sums
+2)
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+#creo la clase
+class identificacion:
+    def __init__(Self,nombre,edad):
+       Self.__nombre =nombre# atrributos encerrados
+       Self.__edad = edad
+     
+
+      ########funciones o metodos
+
+    def saludar(self):
+      
+      print(f"hola soy : {self.__nombre} y tengo {self.__edad}")
+      
+    
+P1 = identificacion("Aldrink",42)
+P1.saludar()
